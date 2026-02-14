@@ -11,18 +11,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const autoSelectCheckbox = document.getElementById("autoSelectCheckbox");
+  const autoEnableCheckbox = document.getElementById("autoEnableCheckbox");
   const githubLink = document.getElementById("github-link");
 
-  // Load autoSelect setting from storage.
-  chrome.storage.sync.get({ autoSelect: false }, (result) => {
-    autoSelectCheckbox.checked = result.autoSelect;
+  // Load settings from storage.
+  chrome.storage.local.get({ 
+    extensionEnabled: true,
+    autoEnable: true
+  }, (result) => {
+    autoEnableCheckbox.checked = result.autoEnable;
   });
 
-  autoSelectCheckbox.addEventListener("change", () => {
-    const autoSelect = autoSelectCheckbox.checked;
-    chrome.storage.sync.set({ autoSelect }, () => {
-      console.log("Auto-select setting updated to", autoSelect);
+  autoEnableCheckbox.addEventListener("change", () => {
+    const autoEnable = autoEnableCheckbox.checked;
+    chrome.storage.local.set({ autoEnable }, () => {
+      console.log("Auto-enable setting updated to", autoEnable);
     });
   });
 

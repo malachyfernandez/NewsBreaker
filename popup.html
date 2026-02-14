@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Google Search Navigator Settings</title>
+  <title>Gemini Source Remover Settings</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Tiny5&amp;display=swap" rel="stylesheet">
@@ -48,7 +48,10 @@
       width: 30px;
       height: 30px;
       margin-right: 8px;
-      background-color: var(--primary-color);
+      background-image: url('ICONFINAL.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
       border-radius: 8px;
       display: flex;
       align-items: center;
@@ -71,52 +74,6 @@
       display: flex;
       flex-direction: column;
       gap: 0;
-    }
-    .keyboard-shortcuts {
-      background: var(--hover-color);
-      border-radius: 8px;
-      padding: 12px;
-      margin-bottom: 16px;
-    }
-    .shortcut-key {
-      display: inline-block;
-      background: var(--background);
-      border: 1px solid var(--border-color);
-      border-radius: 4px;
-      padding: 3px 10px;
-      margin: 0;
-      font-family: monospace;
-      font-weight: bold;
-      color: var(--primary-color);
-    }
-    /* Arrow keys use same styling as shortcut-key */
-    .arrow-key {
-      display: inline-block;
-      background: var(--background);
-      border: 1px solid var(--border-color);
-      border-radius: 4px;
-      padding: 3px 10px;
-      margin: 0;
-      font-family: monospace;
-      font-weight: bold;
-      color: var(--primary-color);
-    }
-    .arrow-or {
-      display: inline;
-      color: var(--secondary-text);
-      margin: 0 3px;
-    }
-    .shortcut-item {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-      font-size: 15px;
-      align-items: center;
-    }
-    .shortcut-combo {
-      display: flex;
-      align-items: center;
-      gap: 3px;
     }
     .settings-section {
       background: var(--hover-color);
@@ -212,13 +169,10 @@
   <div class="container">
     <div class="header">
       <div class="logo">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M7 14l5 5 5-5M7 10l5-5 5 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
       </div>
       <div class="header-title">
         <p class="description" style="margin: 0;">
-          SkipScroll<span class="bullet">•</span>
+          Gemini Source Remover<span class="bullet">•</span>
         </p>
         <button id="settings-button" class="settings-button">
           Settings
@@ -231,44 +185,14 @@
       </div>
     </div>
     <div class="content-layout">
-      <div class="keyboard-shortcuts">
-        <div class="shortcut-item">
-          <span>Move to previous result</span>
-          <div class="shortcut-combo">
-            <span class="arrow-key">▲</span>
-            <span class="arrow-or">or</span>
-            <span class="shortcut-key">K</span>
-          </div>
-        </div>
-        <div class="shortcut-item">
-          <span>Move to next result</span>
-          <div class="shortcut-combo">
-            <span class="arrow-key">▼</span>
-            <span class="arrow-or">or</span>
-            <span class="shortcut-key">J</span>
-          </div>
-        </div>
-        <div class="shortcut-item">
-          <span>Open selected result</span>
-          <span class="shortcut-key">Enter</span>
-        </div>
-        <div class="shortcut-item">
-          <span>Open result in new tab</span>
-          <div class="shortcut-combo">
-            <span class="shortcut-key">Ctrl</span>
-            <span>+</span>
-            <span class="shortcut-key">Enter</span>
-          </div>
-        </div>
-      </div>
       <div class="settings-section">
         <div class="setting-item">
-          <label class="setting-label" for="autoSelectCheckbox">
-            Show highlight on page load
-            <p class="setting-description">You can always press enter regardless</p>
+          <label class="setting-label" for="toggleSwitch">
+            Remove Inline Sources
+            <p class="setting-description">Hide source citations in Gemini responses</p>
           </label>
           <label class="toggle-switch">
-            <input type="checkbox" id="autoSelectCheckbox">
+            <input type="checkbox" id="toggleSwitch">
             <span class="slider"></span>
           </label>
         </div>
