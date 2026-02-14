@@ -1,10 +1,12 @@
 {
   "manifest_version": 3,
   "name": "Gemini Source Remover",
-  "version": "1.0",
+  "version": "0.0.0.1",
   "description": "Toggles the removal of inline sources on Gemini.",
   "permissions": ["storage"],
   "icons": {
+    "16": "ICONFINAL.png",
+    "48": "ICONFINAL.png",
     "128": "ICONFINAL.png"
   },
   "action": {
