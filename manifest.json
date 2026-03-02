@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Gemini Source Remover",
-  "version": "0.0.0.1",
-  "description": "Toggles the removal of inline sources on Gemini.",
-  "permissions": ["storage"],
+  "name": "NewsBreaker",
+  "version": "1.0.0",
+  "description": "Breaks through News & Observer paywalls and removes ad-blocker detection modals.",
+  "permissions": ["storage", "activeTab"],
   "icons": {
     "16": "ICONFINAL.png",
     "48": "ICONFINAL.png",
@@ -19,8 +19,9 @@
   "options_page": "options.html",
   "content_scripts": [
     {
-      "matches": ["*://gemini.google.com/*"],
-      "js": ["content.js"]
+      "matches": ["*://*.newsobserver.com/*", "*://newsobserver.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
     }
   ]
 }
