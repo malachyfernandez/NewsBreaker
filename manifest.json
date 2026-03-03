@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "NewsBreaker",
-  "version": "1.0.0",
+  "name": "NewsBreaker — Break Through News Paywalls",
+  "version": "1.1.0",
   "description": "Breaks through News & Observer ad-blocker detection walls and removes modals that block access to content.",
   "permissions": ["storage", "activeTab"],
   "icons": {
