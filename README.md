@@ -1,24 +1,24 @@
 # NewsBreaker 📰⚡
 
-A browser extension that breaks through News & Observer paywalls and removes ad-blocker detection modals, allowing you to read articles without disabling your ad blocker.
+A browser extension that bypasses the News & Observer ad-blocker detection screen, allowing you to read articles without disabling your ad blocker.
 
 ## Features
 
-- **Automatic Removal**: Automatically detects and removes News & Observer paywall modals
-- **Manual Override**: "Break Now" button for instant removal when needed
-- **Smart Detection**: Uses multiple targeting methods to find and remove modals reliably
+- **Automatic Removal**: Automatically detects and removes News & Observer ad-blocker detection screens
+- **Manual Override**: "Bypass Now" button for instant removal when needed
+- **Smart Detection**: Uses multiple targeting methods to find and remove ad-blocker screens reliably
 - **Overflow Fix**: Restores proper scrolling behavior by removing `overflow: hidden` styles
 - **Toggle Control**: Choose between automatic and manual activation
 - **Lightweight**: Minimal impact on page performance
 
 ## How It Works
 
-NewsBreaker uses intelligent detection methods to identify and remove paywall elements:
+NewsBreaker uses intelligent detection methods to identify and remove ad-blocker detection screens:
 
 1. **Text-based Detection**: Finds elements containing "Welcome to News & Observer" and ad-blocker warnings
 2. **Admiral Detection**: Removes Admiral-related ad-blocker detection scripts
 3. **Style Fixing**: Removes `overflow: hidden` from HTML and body elements
-4. **Continuous Monitoring**: Uses MutationObserver to catch dynamically loaded modals
+4. **Continuous Monitoring**: Uses MutationObserver to catch dynamically loaded screens
 
 ## Installation
 
@@ -45,19 +45,19 @@ NewsBreaker uses intelligent detection methods to identify and remove paywall el
 ### Automatic Mode (Default)
 
 1. Visit any News & Observer article
-2. The extension will automatically detect and remove paywall modals
+2. The extension will automatically detect and remove the ad-blocker detection screen
 3. The article content will be accessible immediately
 
 ### Manual Mode
 
-1. Toggle off "Auto-Break News" in the extension popup
-2. When you encounter a paywall, click the NewsBreaker icon
-3. Press the "Break Now" button to remove the modal
+1. Toggle off "Auto-Bypass Screen" in the extension popup
+2. When you encounter the ad-blocker detection screen, click the NewsBreaker icon
+3. Press the "Bypass Now" button to remove the screen
 4. The article will be accessible
 
 ### Settings
 
-- **Auto-Break News**: Toggle automatic removal on/off
+- **Auto-Bypass Screen**: Toggle automatic removal on/off
 - **Settings**: Access advanced options and preferences
 
 ## Compatibility
@@ -132,10 +132,10 @@ Contributions are welcome! Please:
 3. **Clear Cache**: Clear your browser cache and reload the page
 4. **Check Updates**: Ensure you're using the latest version
 
-### Modal Still Appears
+### Ad-Blocker Screen Still Appears
 
-1. **Manual Override**: Use the "Break Now" button
-2. **Wait for Load**: Some modals load with a delay - give it a few seconds
+1. **Manual Override**: Use the "Bypass Now" button
+2. **Wait for Load**: Some screens load with a delay - give it a few seconds
 3. **Refresh Page**: Try refreshing the page with the extension enabled
 
 ### Performance Issues
@@ -145,9 +145,14 @@ Contributions are welcome! Please:
 
 ## Changelog
 
+### v1.1.0
+- Updated to clarify bypasses ad-blocker detection screen (not paywall)
+- Updated UI text for clarity
+- Improved description accuracy
+
 ### v1.0.0
 - Initial release
-- Automatic modal detection and removal
+- Automatic ad-blocker screen detection and removal
 - Manual override functionality
 - Overflow style fixing
 - Settings page with toggle controls
@@ -168,4 +173,4 @@ This extension is intended for personal use and educational purposes only. Pleas
 
 ---
 
-**Made with ❤️ for free access to news**
+**Made with ❤️ for bypassing ad-blocker detection screens**
