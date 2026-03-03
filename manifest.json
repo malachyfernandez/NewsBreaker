@@ -2,16 +2,20 @@
   "manifest_version": 3,
   "name": "NewsBreaker",
   "version": "1.0.0",
-  "description": "Breaks through News & Observer paywalls and removes ad-blocker detection modals.",
+  "description": "Breaks through News & Observer ad-blocker detection walls and removes modals that block access to content.",
   "permissions": ["storage", "activeTab"],
   "icons": {
-    "16": "ICONFINAL.png",
-    "48": "ICONFINAL.png",
-    "128": "ICONFINAL.png"
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
   },
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "ICONFINAL.png"
+    "default_icon": {
+      "16": "icon-16.png",
+      "48": "icon-48.png",
+      "128": "icon-128.png"
+    }
   },
   "background": {
     "service_worker": "background.js"
