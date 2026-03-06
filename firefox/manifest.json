@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "name": "NewsBreaker — Bypass \"News&Observer\" Ad-Blocker Screen",
+  "version": "1.1.0",
+  "description": "Bypasses News & Observer's ad-blocker detection screen to access content without disabling your ad blocker.",
+  "permissions": ["storage", "activeTab", "tabs"],
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon-16.png",
+      "48": "icon-48.png",
+      "128": "icon-128.png"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["*://*.newsobserver.com/*", "*://newsobserver.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "applications": {
+    "gecko": {
+      "id": "newsbreaker@newsobserver-unblocker.com"
+    }
+  }
+}
